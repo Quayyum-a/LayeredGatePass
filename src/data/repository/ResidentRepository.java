@@ -2,7 +2,7 @@ package data.repository;
 
 import data.model.Resident;
 
-public interface ResidentRepository extends CrudRepository<Resident, String> {
+public interface ResidentRepository extends CrudRepository<Resident, Integer> {
     Resident findByPhoneNumber(String phoneNumber);
 
     Resident findByFullName(String fullName);
@@ -12,6 +12,4 @@ public interface ResidentRepository extends CrudRepository<Resident, String> {
     Resident findByAddress(String address);
 
     Resident findByEmail(String email);
-
-    Resident findByAccessCode(String accessCode);
 }

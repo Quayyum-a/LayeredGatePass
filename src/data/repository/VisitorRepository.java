@@ -2,7 +2,7 @@ package data.repository;
 
 import data.model.Visitor;
 
-public interface VisitorRepository extends CrudRepository<Visitor, String> {
+public interface VisitorRepository extends CrudRepository<Visitor, Integer> {
     Visitor findByPhoneNumber(String phoneNumber);
 
     Visitor findByFullName(String fullName);
@@ -10,6 +10,8 @@ public interface VisitorRepository extends CrudRepository<Visitor, String> {
     Visitor findById(int id);
 
     Visitor findByWhomToVisit(String whomToVisit);
+
+    Visitor findByEmail(String email);
 
     Visitor findByAccessCode(String accessCode);
 }
