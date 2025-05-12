@@ -1,4 +1,4 @@
-package data.models;
+package data.model;
 
 public class Visitor {
     private int id;

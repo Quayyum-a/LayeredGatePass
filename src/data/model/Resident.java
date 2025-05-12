@@ -1,4 +1,4 @@
-package data.models;
+package data.model;
 
 public class Resident {
     private int id;
