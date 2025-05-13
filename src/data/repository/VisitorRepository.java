@@ -11,7 +11,5 @@ public interface VisitorRepository extends CrudRepository<Visitor, Integer> {
 
     Visitor findByWhomToVisit(String whomToVisit);
 
-    Visitor findByEmail(String email);
-
     Visitor findByAccessCode(String accessCode);
 }
