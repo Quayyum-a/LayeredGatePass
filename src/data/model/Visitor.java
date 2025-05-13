@@ -6,6 +6,14 @@ public class Visitor {
     private Resident whomToVisit;
     private String phoneNumber;
 
+
+    public Visitor(int id, String fullName, Resident whomToVisit, String phoneNumber) {
+        this.id = id;
+        this.fullName = fullName;
+        this.whomToVisit = whomToVisit;
+        this.phoneNumber = phoneNumber;
+    }
+
     public int getId() {
         return id;
     }
