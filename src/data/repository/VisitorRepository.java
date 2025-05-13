@@ -1,5 +1,6 @@
 package data.repository;
 
+import data.model.AccessCode;
 import data.model.Visitor;
 
 public interface VisitorRepository extends CrudRepository<Visitor, Integer> {
@@ -11,5 +12,7 @@ public interface VisitorRepository extends CrudRepository<Visitor, Integer> {
 
     Visitor findByWhomToVisit(String whomToVisit);
 
-    Visitor findByAccessCode(String accessCode);
+    Visitor findByWhomToVisit(int whomToVisitId);
+
+    Visitor findByAccessCode(AccessCode accessCode);
 }
