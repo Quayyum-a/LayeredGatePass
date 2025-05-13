@@ -7,6 +7,14 @@ public class Resident {
     private String phoneNumber;
     private String email;
 
+    public Resident(int id, String fullName, String address, String phoneNumber, String email) {
+        this.id = id;
+        this.fullName = fullName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
