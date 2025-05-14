@@ -44,4 +44,20 @@ public class ResidentService {
     public Resident findResidentByEmail(String email) {
         return residentRepository.findByEmail(email);
     }
+
+    public Resident saveResident(Resident resident) {
+        if (resident.getId() == 0) {
+            return residentRepository.save(resident);
+        } else {
+            Resident existingResident = residentRepository.findById(resident.getId());
+            if (existingResident != null) {
+                existingResident.setFullName(resident.getFullName());
+                existingResident.setEmail(resident.getEmail());
+                existingResident.setPhoneNumber(resident.getPhoneNumber());
+                return residentRepository.save(existingResident);
+            } else {
+                throw new IllegalArgumentException("Resident not found");
+            }
+        }
+    }
 }
