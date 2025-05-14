@@ -12,4 +12,7 @@ public interface ResidentRepository extends CrudRepository<Resident, Integer> {
     Resident findByAddress(String address);
 
     Resident findByEmail(String email);
+
+    // Note: generateAccessCode should be in ResidentService, not here
+    Resident generateAccessCode(int residentId);
 }
