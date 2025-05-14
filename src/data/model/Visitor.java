@@ -5,6 +5,7 @@ public class Visitor {
     private String fullName;
     private Resident whomToVisit;
     private String phoneNumber;
+    private AccessCode accessCode;
 
 
     public Visitor(int id, String fullName, Resident whomToVisit, String phoneNumber) {
@@ -45,4 +46,9 @@ public class Visitor {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public AccessCode getAccessCode() {
+        return accessCode;
+    }
+
 }
