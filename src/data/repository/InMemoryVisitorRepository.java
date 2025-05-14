@@ -6,7 +6,7 @@ import data.model.Visitor;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class InMemoryVisitorRepository implements VisitorRepository{
+public  class InMemoryVisitorRepository implements VisitorRepository{
     private final List<Visitor> visitors = new ArrayList<>();
     private int nextId = 1;
 
@@ -62,6 +62,22 @@ public abstract class InMemoryVisitorRepository implements VisitorRepository{
     public Visitor findByFullName(String fullName) {
         return visitors.stream()
                 .filter(v -> v.getFullName().equals(fullName))
+                .findFirst()
+                .orElse(null);
+    }
+
+    @Override
+    public Visitor findById(int id) {
+        return visitors.stream()
+                .filter(v -> v.getId() == id)
+                .findFirst()
+                .orElse(null);
+    }
+
+    @Override
+    public Visitor findByWhomToVisit(String whomToVisit) {
+        return visitors.stream()
+                .filter(v -> v.getWhomToVisit().getFullName().equals(whomToVisit))
                 .findFirst()
                 .orElse(null);
     }
