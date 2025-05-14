@@ -15,4 +15,5 @@ public interface VisitorRepository extends CrudRepository<Visitor, Integer> {
     Visitor findByWhomToVisit(int whomToVisitId);
 
     Visitor findByAccessCode(AccessCode accessCode);
+
 }
